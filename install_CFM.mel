@@ -1,0 +1,137 @@
+// ===========================================================================
+// install_CFM.mel  -  CFM (Collect Files for Maya) installer
+//
+// HOW TO USE
+//   1. Put this file and collect_files_maya_free.py in the same folder.
+//   2. Drag and drop this file (install_CFM.mel) into the Maya viewport.
+//   -> collect_files_maya_free.py is copied to your Maya "scripts" folder and
+//      a "CFM" button is added to the current shelf.
+//
+// If nothing happens when you drop it, run this in the Script Editor (MEL tab),
+// using the real path of this file:
+//      source "C:/path/to/install_CFM.mel";
+//
+// The installer runs as soon as this file is sourced, so run it again at any time
+// to update the script (the old shelf button is replaced).
+// Requires Maya 2022 or later (Python 3).
+//
+// If the Python file is not found next to this file, a file dialog opens so you
+// can pick collect_files_maya_free.py manually.
+// ===========================================================================
+
+// Set to 1 right after the installer ran while this file was being sourced.
+// (Some Maya versions also call onMayaDroppedMelFile afterwards; this avoids a second run.)
+global int $gCFMRanAtSource = 0;
+
+global proc installCFM()
+{
+    print("[CFM] installer started\n");
+    string $py = "";
+    $py += "import os\n";
+    $py += "import sys\n";
+    $py += "import shutil\n";
+    $py += "import importlib\n";
+    $py += "import traceback\n";
+    $py += "import maya.cmds as cmds\n";
+    $py += "\n";
+    $py += "\n";
+    $py += "def _cfm_install():\n";
+    $py += "    MODULE = \"collect_files_maya_free\"\n";
+    $py += "    TITLE = \"CFM Installer\"\n";
+    $py += "    NL = chr(10)\n";
+    $py += "\n";
+    $py += "    def show_error(ja, en):\n";
+    $py += "        cmds.confirmDialog(title=TITLE, message=ja + NL + NL + en, button=[\"OK\"], icon=\"critical\")\n";
+    $py += "\n";
+    $py += "    # 1. Find collect_files_maya_free.py in the same folder as this .mel file\n";
+    $py += "    info = \"\"\n";
+    $py += "    try:\n";
+    $py += "        info = cmds.whatIs(\"onMayaDroppedMelFile\")\n";
+    $py += "    except Exception:\n";
+    $py += "        pass\n";
+    $py += "\n";
+    $py += "    src = None\n";
+    $py += "    if \"found in:\" in info:\n";
+    $py += "        mel_dir = os.path.dirname(info.split(\"found in:\", 1)[1].strip())\n";
+    $py += "        candidate = os.path.join(mel_dir, MODULE + \".py\")\n";
+    $py += "        if os.path.isfile(candidate):\n";
+    $py += "            src = candidate\n";
+    $py += "\n";
+    $py += "    if src is None:\n";
+    $py += "        picked = cmds.fileDialog2(\n";
+    $py += "            fileMode=1,\n";
+    $py += "            dialogStyle=2,\n";
+    $py += "            fileFilter=\"Python (*.py)\",\n";
+    $py += "            caption=\"collect_files_maya_free.py \\u3092\\u9078\\u629e\\u3057\\u3066\\u304f\\u3060\\u3055\\u3044 / Select collect_files_maya_free.py\",\n";
+    $py += "        )\n";
+    $py += "        if not picked:\n";
+    $py += "            return\n";
+    $py += "        src = picked[0]\n";
+    $py += "\n";
+    $py += "    # 2. Copy to user's scripts folder (overwrite if already exists)\n";
+    $py += "    scripts_dir = cmds.internalVar(userScriptDir=True)\n";
+    $py += "    dst = os.path.join(scripts_dir, MODULE + \".py\")\n";
+    $py += "    try:\n";
+    $py += "        os.makedirs(scripts_dir, exist_ok=True)\n";
+    $py += "        if os.path.normcase(os.path.abspath(src)) != os.path.normcase(os.path.abspath(dst)):\n";
+    $py += "            shutil.copyfile(src, dst)\n";
+    $py += "    except Exception as e:\n";
+    $py += "        show_error(\n";
+    $py += "            \"scripts \\u30d5\\u30a9\\u30eb\\u30c0\\u3078\\u306e\\u30b3\\u30d4\\u30fc\\u306b\\u5931\\u6557\\u3057\\u307e\\u3057\\u305f: \" + str(e),\n";
+    $py += "            \"Failed to copy the script to the scripts folder: \" + str(e),\n";
+    $py += "        )\n";
+    $py += "        return\n";
+    $py += "\n";
+    $py += "    normalized = [os.path.normcase(os.path.abspath(p)) for p in sys.path]\n";
+    $py += "    if os.path.normcase(os.path.abspath(scripts_dir)) not in normalized:\n";
+    $py += "        sys.path.append(scripts_dir)\n";
+    $py += "\n";
+    $py += "    # 3. Reload module and register the CFM button on the current shelf\n";
+    $py += "    try:\n";
+    $py += "        sys.modules.pop(MODULE, None)\n";
+    $py += "        importlib.invalidate_caches()\n";
+    $py += "        module = importlib.import_module(MODULE)\n";
+    $py += "        module.install_shelf_button()\n";
+    $py += "    except Exception as e:\n";
+    $py += "        traceback.print_exc()\n";
+    $py += "        show_error(\n";
+    $py += "            \"\\u30b7\\u30a7\\u30eb\\u30d5\\u3078\\u306e\\u767b\\u9332\\u306b\\u5931\\u6557\\u3057\\u307e\\u3057\\u305f: \" + str(e) + NL + \"\\uff08\\u8a73\\u7d30\\u306f\\u30b9\\u30af\\u30ea\\u30d7\\u30c8\\u30a8\\u30c7\\u30a3\\u30bf\\u3092\\u78ba\\u8a8d\\u3057\\u3066\\u304f\\u3060\\u3055\\u3044\\uff09\",\n";
+    $py += "            \"Failed to register the shelf button: \" + str(e) + NL + \"(See the Script Editor for details.)\",\n";
+    $py += "        )\n";
+    $py += "        return\n";
+    $py += "\n";
+    $py += "    cmds.confirmDialog(\n";
+    $py += "        title=TITLE,\n";
+    $py += "        message=(\n";
+    $py += "            \"\\u30a4\\u30f3\\u30b9\\u30c8\\u30fc\\u30eb\\u304c\\u5b8c\\u4e86\\u3057\\u307e\\u3057\\u305f\\u3002\" + NL\n";
+    $py += "            + \"scripts \\u30d5\\u30a9\\u30eb\\u30c0\\u306b\\u30b3\\u30d4\\u30fc\\u3057\\u3001\\u30b7\\u30a7\\u30eb\\u30d5\\u306b\\u300cCFM\\u300d\\u30dc\\u30bf\\u30f3\\u3092\\u767b\\u9332\\u3057\\u307e\\u3057\\u305f\\u3002\" + NL\n";
+    $py += "            + dst + NL + NL\n";
+    $py += "            + \"Installation complete.\" + NL\n";
+    $py += "            + \"The script was copied to the scripts folder and the CFM button was added to the shelf.\"\n";
+    $py += "        ),\n";
+    $py += "        button=[\"OK\"],\n";
+    $py += "    )\n";
+    $py += "\n";
+    $py += "\n";
+    $py += "_cfm_install()\n";
+    $py += "del _cfm_install\n";
+    if (catch(`python($py)`)) {
+        confirmDialog -title "CFM Installer" -icon "critical" -button "OK"
+            -message "The installer failed. Please check the Script Editor for details.";
+    }
+}
+
+// Called by Maya after a .mel file is dropped into the viewport (version dependent).
+global proc onMayaDroppedMelFile()
+{
+    global int $gCFMRanAtSource;
+    if ($gCFMRanAtSource) {
+        $gCFMRanAtSource = 0;
+        return;
+    }
+    installCFM();
+}
+
+// Run the installer as soon as this file is sourced (drag and drop or `source`).
+installCFM();
+$gCFMRanAtSource = 1;
