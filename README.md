@@ -1,19 +1,4 @@
-# Collect Files for Maya (CFM)
 
-**Language:** [English](#english) | [日本語](#日本語)
-
-[![Get Pro on Gumroad](https://img.shields.io/badge/Get_Pro-Gumroad_(Launch_Sale_$5)-ff90e8?style=for-the-badge&logo=gumroad&logoColor=black)](https://mashitaya.gumroad.com/l/jwqvrf/6k511u9)
-[![Get Pro on BOOTH](https://img.shields.io/badge/Get_Pro-BOOTH_(日本語)-fc4d50?style=for-the-badge)](https://yworks.booth.pm/items/9172929)
-![Autodesk Maya](https://img.shields.io/badge/Autodesk_Maya-2022--2027-0696D7?style=for-the-badge&logo=autodesk&logoColor=white)
-
-> [!IMPORTANT]
-> **🚀 Collect Files for Maya Pro (CFMP) is Out Now! (Limited Launch Sale: $7 → $5 / 600円 → 500円)**
-> Working with referenced rigs/environments, UDIM textures, or client deliverables? Upgrade to **CFM Pro** to unlock:
-> - **Recursive Nested Reference Collection (`.ma` & `.mb`):** Automatically collects child, grandchild, and deeper nested references and relinks all internal paths automatically.
-> - **UDIM & Frame Sequence Auto-Expansion:** Collects all UDIM tiles (`<UDIM>`, `<uvtile>`, Mari `1001+`, Mudbox `_u1_v1`) and animated sequences without missing files.
-> - **Auto Collection Report (`collection_report.txt`) & 1-Click `.zip` Archive:** Generates a complete asset/missing-link manifest and packages your project into a delivery-ready `.zip`.
->
-> 👉 **[Download CFM Pro on Gumroad (Launch Sale: $5)](https://mashitaya.gumroad.com/l/jwqvrf/6k511u9)** | **[BOOTHでPro版を購入する (セール価格 500円)](https://yworks.booth.pm/items/9172929)** *(See [Free vs. Pro Comparison](#free-vs-pro-comparison) below)*
 
 ![Collect Files for Maya Pro Demo](CFMP_MAYA_all_demo.gif)
 
