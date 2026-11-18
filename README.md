@@ -3,16 +3,17 @@
 **Language:** [English](#english) | [日本語](#日本語)
 
 [![Get Pro on Gumroad](https://img.shields.io/badge/Get_Pro-Gumroad_(Launch_Sale_$5)-ff90e8?style=for-the-badge&logo=gumroad&logoColor=black)](https://mashitaya.gumroad.com/l/jwqvrf/6k511u9)
+[![Get Pro on BOOTH](https://img.shields.io/badge/Get_Pro-BOOTH_(日本語)-fc4d50?style=for-the-badge)](https://yworks.booth.pm/items/9172929)
 ![Autodesk Maya](https://img.shields.io/badge/Autodesk_Maya-2022--2027-0696D7?style=for-the-badge&logo=autodesk&logoColor=white)
 
 > [!IMPORTANT]
-> **🚀 Collect Files for Maya Pro (CFMP) is Out Now! (Limited Launch Sale: $7 → $5)**
+> **🚀 Collect Files for Maya Pro (CFMP) is Out Now! (Limited Launch Sale: $7 → $5 / 600円 → 500円)**
 > Working with referenced rigs/environments, UDIM textures, or client deliverables? Upgrade to **CFM Pro** to unlock:
 > - **Recursive Nested Reference Collection (`.ma` & `.mb`):** Automatically collects child, grandchild, and deeper nested references and relinks all internal paths automatically.
 > - **UDIM & Frame Sequence Auto-Expansion:** Collects all UDIM tiles (`<UDIM>`, `<uvtile>`, Mari `1001+`, Mudbox `_u1_v1`) and animated sequences without missing files.
 > - **Auto Collection Report (`collection_report.txt`) & 1-Click `.zip` Archive:** Generates a complete asset/missing-link manifest and packages your project into a delivery-ready `.zip`.
 >
-> 👉 **[Download CFM Pro on Gumroad (Launch Sale: $5)](https://mashitaya.gumroad.com/l/jwqvrf/6k511u9)** *(See [Free vs. Pro Comparison](#free-vs-pro-comparison) below)*
+> 👉 **[Download CFM Pro on Gumroad (Launch Sale: $5)](https://mashitaya.gumroad.com/l/jwqvrf/6k511u9)** | **[BOOTHでPro版を購入する (セール価格 500円)](https://yworks.booth.pm/items/9172929)** *(See [Free vs. Pro Comparison](#free-vs-pro-comparison) below)*
 
 ![Collect Files for Maya Pro Demo](CFMP_MAYA_all_demo.gif)
 
@@ -43,7 +44,7 @@ This repository hosts the open-source **Free Edition**.
 | **Auto Collection Report (`collection_report.txt`)** | — | ✅ |
 | **1-Click Delivery `.zip` Archive** | — | ✅ |
 
-👉 **[Get CFM Pro on Gumroad (Launch Sale: $5)](https://mashitaya.gumroad.com/l/jwqvrf/6k511u9)**
+👉 **[Get CFM Pro on Gumroad (Launch Sale: $5)](https://mashitaya.gumroad.com/l/jwqvrf/6k511u9)** | **[Get CFM Pro on BOOTH (Japan)](https://yworks.booth.pm/items/9172929)**
 
 ### Installation
 
@@ -55,7 +56,7 @@ This repository hosts the open-source **Free Edition**.
 
 * **Autodesk Maya:** 2022 – 2027 (Python 3 / PySide2 & PySide6)
 * **OS:** Windows / macOS / Linux
-* **License:** The **Free Edition** in this repository is open source. For nested reference recursion, UDIM/sequence expansion, reports, and ZIP packaging, check out **[CFM Pro on Gumroad](https://mashitaya.gumroad.com/l/jwqvrf/6k511u9)**.
+* **License:** The **Free Edition** in this repository is open source. For nested reference recursion, UDIM/sequence expansion, reports, and ZIP packaging, check out **[CFM Pro on Gumroad](https://mashitaya.gumroad.com/l/jwqvrf/6k511u9)** or **[BOOTH](https://yworks.booth.pm/items/9172929)**.
 
 ---
 
@@ -84,9 +85,9 @@ This repository hosts the open-source **Free Edition**.
 | **収集・リンク切れ確認レポート（`collection_report.txt`）出力** | — | ✅ |
 | **納品用 `.zip` 自動圧縮** | — | ✅ |
 
-> **🎉 Pro版（CFMP）ローンチセール開催中（$7 → $5）：**
+> **🎉 Pro版（CFMP）ローンチセール開催中（定価 600円 → 500円 / $7 → $5）：**
 > 子・孫階層のネストされたリファレンス再帰収集やUDIM対応、収集レポート・納品用ZIP自動出力を備えた **CFM Pro** を特別価格で入手できます。
-> 👉 **[Gumroadで購入する (Launch Sale: $5)](https://mashitaya.gumroad.com/l/jwqvrf/6k511u9)**
+> 👉 **[BOOTHでPro版を購入する (セール価格 500円)](https://yworks.booth.pm/items/9172929)** | **[Gumroadで購入する (Launch Sale: $5)](https://mashitaya.gumroad.com/l/jwqvrf/6k511u9)**
 
 ### インストール方法
 
@@ -98,4 +99,4 @@ This repository hosts the open-source **Free Edition**.
 
 * **対応Mayaバージョン：** Autodesk Maya 2022 – 2027（Python 3 / PySide2 & PySide6 対応）
 * **対応OS：** Windows / macOS / Linux
-* **ライセンス：** 本リポジトリの **無料版（Free Edition）** はオープンソースです。リファレンス再帰収集・UDIM対応・レポート・ZIP圧縮などの全機能を利用したい場合は、**[Gumroad](https://mashitaya.gumroad.com/l/jwqvrf/6k511u9)** にて **Pro版** をお求めください。
+* **ライセンス：** 本リポジトリの **無料版（Free Edition）** はオープンソースです。リファレンス再帰収集・UDIM対応・レポート・ZIP圧縮などの全機能を利用したい場合は、**[BOOTH](https://yworks.booth.pm/items/9172929)** または **[Gumroad](https://mashitaya.gumroad.com/l/jwqvrf/6k511u9)** にて **Pro版** をお求めください。
