@@ -18,19 +18,6 @@ This repository hosts the open-source **Free Edition**.
 * **Non-Destructive Workflow:** Keeps your current working scene, paths, and active workspace untouched.
 * **Bilingual UI & Easy Setup:** Supports Japanese / English UI switching and drag-and-drop shelf installation with zero external dependencies.
 
-### Free vs. Pro Comparison
-
-| Feature | Free Edition (GitHub) | Pro Edition (CFMP) |
-| :--- | :---: | :---: |
-| Texture & External Asset Collection | ✅ | ✅ |
-| Subfolder Organization & `workspace.mel` | ✅ | ✅ |
-| **Recursive Nested References (`.ma` / `.mb`)** | — | ✅ |
-| **UDIM & Frame Sequence Auto-Expansion** | — | ✅ |
-| **Auto Collection Report (`collection_report.txt`)** | — | ✅ |
-| **1-Click Delivery `.zip` Archive** | — | ✅ |
-
-👉 **[Get CFM Pro on Gumroad (Launch Sale: $5)](https://mashitaya.gumroad.com/l/jwqvrf/6k511u9)** | **[Get CFM Pro on BOOTH (Japan)](https://yworks.booth.pm/items/9172929)**
-
 ### Installation
 
 1. Download or clone this repository (`Code` > `Download ZIP`) and extract the files.
@@ -41,7 +28,7 @@ This repository hosts the open-source **Free Edition**.
 
 * **Autodesk Maya:** 2022 – 2027 (Python 3 / PySide2 & PySide6)
 * **OS:** Windows / macOS / Linux
-* **License:** The **Free Edition** in this repository is open source. For nested reference recursion, UDIM/sequence expansion, reports, and ZIP packaging, check out **[CFM Pro on Gumroad](https://mashitaya.gumroad.com/l/jwqvrf/6k511u9)** or **[BOOTH](https://yworks.booth.pm/items/9172929)**.
+* **License:** The **Free Edition** in this repository is open source. For nested reference recursion, UDIM/sequence expansion, reports, and ZIP packaging, 
 
 ---
 
@@ -59,20 +46,7 @@ This repository hosts the open-source **Free Edition**.
 * **非破壊設計：** 収集後も現在開いている作業シーンのパスやプロジェクト設定は元のまま維持されます。
 * **日英バイリンガルUI＆簡単導入：** 外部ライブラリ不要（Maya標準Pythonのみ）。`install_CFM.mel` をビューポートへドラッグ＆ドロップするだけでシェルフにボタン登録できます。
 
-### 無料版（Free）と Pro版（CFMP）の機能比較
 
-| 機能 | 無料版 (GitHub) | Pro版 (CFMP) |
-| :--- | :---: | :---: |
-| テクスチャ・外部ファイル収集 | ✅ | ✅ |
-| フォルダ整理・`workspace.mel` 相対パス化 | ✅ | ✅ |
-| **子・孫リファレンス再帰収集（`.ma` / `.mb`）** | — | ✅ |
-| **UDIM・連番の一括収集** | — | ✅ |
-| **収集・リンク切れ確認レポート（`collection_report.txt`）出力** | — | ✅ |
-| **納品用 `.zip` 自動圧縮** | — | ✅ |
-
-> **🎉 Pro版（CFMP）ローンチセール開催中（定価 600円 → 500円 / $7 → $5）：**
-> 子・孫階層のネストされたリファレンス再帰収集やUDIM対応、収集レポート・納品用ZIP自動出力を備えた **CFM Pro** を特別価格で入手できます。
-> 👉 **[BOOTHでPro版を購入する (セール価格 500円)](https://yworks.booth.pm/items/9172929)** | **[Gumroadで購入する (Launch Sale: $5)](https://mashitaya.gumroad.com/l/jwqvrf/6k511u9)**
 
 ### インストール方法
 
