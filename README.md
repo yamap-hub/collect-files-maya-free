@@ -28,7 +28,7 @@ This repository hosts the open-source **Free Edition**.
 
 * **Autodesk Maya:** 2022 – 2027 (Python 3 / PySide2 & PySide6)
 * **OS:** Windows / macOS / Linux
-* **License:** The **Free Edition** in this repository is open source. For nested reference recursion, UDIM/sequence expansion, reports, and ZIP packaging, 
+* **License:** The **Free Edition** in this repository is open source. 
 
 ---
 
@@ -58,4 +58,4 @@ This repository hosts the open-source **Free Edition**.
 
 * **対応Mayaバージョン：** Autodesk Maya 2022 – 2027（Python 3 / PySide2 & PySide6 対応）
 * **対応OS：** Windows / macOS / Linux
-* **ライセンス：** 本リポジトリの **無料版（Free Edition）** はオープンソースです。リファレンス再帰収集・UDIM対応・レポート・ZIP圧縮などの全機能を利用したい場合は、**[BOOTH](https://yworks.booth.pm/items/9172929)** または **[Gumroad](https://mashitaya.gumroad.com/l/jwqvrf/6k511u9)** にて **Pro版** をお求めください。
+* **ライセンス：** 本リポジトリの **無料版（Free Edition）** はオープンソースです。
