@@ -1,7 +1,4 @@
 
-
-![Collect Files for Maya Pro Demo](CFMP_MAYA_all_demo.gif)
-
 ---
 # Collect Files for Maya (CFM) — Free Edition
 
